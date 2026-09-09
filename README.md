@@ -70,10 +70,10 @@ const pair = await getRate('EUR', 'SAR', { apiKey: 'art_live_...' });
 {
   bank: 'sama',
   name: 'Saudi Central Bank (SAMA)',
-  rate_date: '2026-06-30',   // Saudi Central Bank (SAMA)'s own publication date
+  rate_date: '2026-07-31',   // Saudi Central Bank (SAMA)'s own publication date
   source: 'EUR',
   target: 'SAR',
-  rate: 4.2727464,
+  rate: 4.2976014,
   rate_type: 'close',
   derived: false,
   method: 'published',
@@ -98,10 +98,10 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'sama',
   name: 'Saudi Central Bank (SAMA)',
-  rate_date: '2026-06-30',
+  rate_date: '2026-07-31',
   rates: [
-    { "base": "EUR", "quote": "SAR", "type": "close", "value": 4.2727464 },
-    { "base": "EUR", "quote": "SAR", "type": "monthly_average", "value": 4.3191871 },
+    { "base": "EUR", "quote": "SAR", "type": "close", "value": 4.2976014 },
+    { "base": "EUR", "quote": "SAR", "type": "monthly_average", "value": 4.2804897 },
     // … the rest of the published table (12 currencies vs SAR)
   ],
   disclaimer: '…'
@@ -141,7 +141,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'sama-exchange-rate';
 
 const series = await getHistory(
-  { source: 'EUR', target: 'SAR', from: '2026-01-01', to: '2026-06-30' },
+  { source: 'EUR', target: 'SAR', from: '2026-01-01', to: '2026-07-31' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -154,11 +154,11 @@ const series = await getHistory(
   source: 'EUR',
   target: 'SAR',
   from: '2026-01-01',
-  to: '2026-06-30',
+  to: '2026-07-31',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-06-30', rate: 4.2727464, rate_type: 'close', derived: false, method: 'published' },
+    { date: '2026-07-31', rate: 4.2976014, rate_type: 'close', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -236,6 +236,14 @@ getRate('EUR', 'SAR', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 | `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 2009 |
+
+## 📥 Bulk data (no key)
+
+Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+
+- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/sama.csv`)
+- Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
+- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/sama/latest.json`
 
 ## 🔗 Links
 
