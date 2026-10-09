@@ -4,6 +4,8 @@
 [![license](https://img.shields.io/npm/l/sama-exchange-rate.svg)](https://github.com/AllRates-Today/sama-exchange-rate/blob/main/LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/sama-exchange-rate)
 [![TypeScript](https://img.shields.io/badge/TypeScript-types%20included-3178C6.svg)](https://www.typescriptlang.org/)
+[![EUR/SAR today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fsama%3Fsource%3DEUR%26target%3DSAR&query=%24.rate&label=EUR%2FSAR%20published%20by%20Saudi%20Central%20Bank%20(SAMA)&color=0A7E8C&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/sama/)
+[![rate date](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fsama%3Fsource%3DEUR%26target%3DSAR&query=%24.rate_date&label=rate%20date&color=555&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/sama/)
 
 **Official Saudi Central Bank (SAMA) (Saudi Arabia) monthly exchange rates for Node.js and TypeScript. The published central bank rates behind tax filings, customs valuations, audits, and compliant invoicing — not market estimates, but the numbers Saudi Central Bank (SAMA) itself prints, every month.**
 
@@ -32,6 +34,43 @@ console.log(r.rate_date, r.rates.length); // the central bank's latest published
 ```
 
 The open endpoint serves the *latest* table only and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables, history, and CSV/XML/Excel output.
+
+## 📈 Latest published table
+
+Today's full Saudi Central Bank (SAMA) table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
+
+<!-- daily-table:start -->
+Published **2026-07-31** by Saudi Central Bank (SAMA) — 24 rates. Updated 2026-10-08.
+
+| Base | Quote | Type | Rate |
+| --- | --- | --- | ---: |
+| AUD | SAR | close | 2.6305805 |
+| AUD | SAR | monthly_average | 2.6118306 |
+| BRL | SAR | close | 0.73916558 |
+| BRL | SAR | monthly_average | 0.73401057 |
+| CHF | SAR | close | 4.6253694 |
+| CHF | SAR | monthly_average | 4.6229663 |
+| CNY | SAR | close | 0.55461841 |
+| CNY | SAR | monthly_average | 0.55337878 |
+| EUR | SAR | close | 4.2976014 |
+| EUR | SAR | monthly_average | 4.2804897 |
+| GBP | SAR | close | 5.030462 |
+| GBP | SAR | monthly_average | 5.0133182 |
+| INR | SAR | close | 0.039235708 |
+| INR | SAR | monthly_average | 0.039136208 |
+| JPY | SAR | close | 0.023293968 |
+| JPY | SAR | monthly_average | 0.023059174 |
+| KRW | SAR | close | 0.0025965805 |
+| KRW | SAR | monthly_average | 0.0025093839 |
+| THB | SAR | close | 0.11198406 |
+| THB | SAR | monthly_average | 0.11192007 |
+| TRY | SAR | close | 0.078847735 |
+| TRY | SAR | monthly_average | 0.079760374 |
+| USD | SAR | close | 3.75 |
+| USD | SAR | monthly_average | 3.75 |
+
+Source: [Official rates published by SAMA, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/sama/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
+<!-- daily-table:end -->
 
 ## 🔑 Get your API key
 
