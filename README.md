@@ -47,7 +47,7 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-07-31 by Saudi Central Bank (SAMA) (the API currently flags this table as stale) — 24 rates. Updated 2026-10-26.</summary>
+<summary>Table as text: published 2026-07-31 by Saudi Central Bank (SAMA) (the API currently flags this table as stale) — 24 rates. Updated 2026-10-27.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
