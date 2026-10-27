@@ -46,7 +46,75 @@ The open endpoint serves the *latest* table only (JSON by default; add `?format=
 The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The same table as text is folded below for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-_The table is filled in by the daily workflow._
+<details>
+<summary>Table as text: published 2026-10-27 by Saudi Central Bank (SAMA) — 66 rates, first 60 shown. Updated 2026-10-27.</summary>
+
+| Base | Quote | Type | Rate |
+| --- | --- | --- | ---: |
+| AED | SAR | reference | 1.02094 |
+| AFN | SAR | reference | 0.05776 |
+| ALL | SAR | reference | 0.04628 |
+| ARS | SAR | reference | 0.00245 |
+| AUD | SAR | reference | 2.63662 |
+| BAM | SAR | reference | 2.14819 |
+| BDT | SAR | reference | 0.03031 |
+| BGN | SAR | reference | 2.14819 |
+| BHD | SAR | reference | 9.94167 |
+| BND | SAR | reference | 2.934 |
+| BRL | SAR | reference | 0.74353 |
+| CAD | SAR | reference | 2.68211 |
+| CHF | SAR | reference | 4.54876 |
+| CLP | SAR | reference | 0.00378 |
+| CNY | SAR | reference | 0.56213 |
+| COP | SAR | reference | 0.00119 |
+| CUP | SAR | reference | 0.15625 |
+| CZK | SAR | reference | 0.17258 |
+| DJF | SAR | reference | 0.02109 |
+| DKK | SAR | reference | 0.56213 |
+| DZD | SAR | reference | 0.02781 |
+| EGP | SAR | reference | 0.06781 |
+| ETB | SAR | reference | 0.02305 |
+| EUR | SAR | reference | 4.2015 |
+| GBP | SAR | reference | 5.01956 |
+| HKD | SAR | reference | 0.47819 |
+| HUF | SAR | reference | 0.01146 |
+| INR | SAR | reference | 0.03949 |
+| ISK | SAR | reference | 0.0308 |
+| JOD | SAR | reference | 5.28913 |
+| JPY | SAR | reference | 0.02392 |
+| KES | SAR | reference | 0.02887 |
+| KRW | SAR | reference | 0.00283 |
+| KWD | SAR | reference | 12.06563 |
+| LKR | SAR | reference | 0.01128 |
+| LYD | SAR | reference | 0.58537 |
+| MAD | SAR | reference | 0.38216 |
+| MMK | SAR | reference | 0.00178 |
+| MUR | SAR | reference | 0.07951 |
+| MXN | SAR | reference | 0.20092 |
+| MYR | SAR | reference | 0.91788 |
+| NGN | SAR | reference | 0.00278 |
+| NOK | SAR | reference | 0.40182 |
+| NZD | SAR | reference | 2.13731 |
+| OMR | SAR | reference | 9.74025 |
+| PHP | SAR | reference | 0.05894 |
+| PKR | SAR | reference | 0.01355 |
+| PLN | SAR | reference | 0.95493 |
+| QAR | SAR | reference | 1.02993 |
+| RON | SAR | reference | 0.78551 |
+| RUB | SAR | reference | 0.04649 |
+| SEK | SAR | reference | 0.37783 |
+| SGD | SAR | reference | 2.93381 |
+| SOS | SAR | reference | 0.00659 |
+| THB | SAR | reference | 0.11104 |
+| TJS | SAR | reference | 0.40725 |
+| TND | SAR | reference | 1.24945 |
+| TRY | SAR | reference | 0.07539 |
+| TWD | SAR | reference | 0.11498 |
+| TZS | SAR | reference | 0.00141 |
+
+</details>
+
+[Full table on the Saudi Central Bank (SAMA) rates page](https://allratestoday.com/central-bank-rates-api/sama/) · Source: [Official rates published by SAMA, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/sama/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
 
 ## 📦 Installation
