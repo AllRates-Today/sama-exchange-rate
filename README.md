@@ -7,7 +7,7 @@
 [![EUR/SAR today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fsama%3Fsource%3DEUR%26target%3DSAR&query=%24.rate&label=EUR%2FSAR%20published%20by%20Saudi%20Central%20Bank%20(SAMA)&color=0A7E8C&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/sama/)
 [![rate date](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fsama%3Fsource%3DEUR%26target%3DSAR&query=%24.rate_date&label=rate%20date&color=555&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/sama/)
 
-**Official Saudi Central Bank (SAMA) (Saudi Arabia) monthly exchange rates for Node.js and TypeScript. The published central bank rates behind tax filings, customs valuations, audits, and compliant invoicing — not market estimates, but the numbers Saudi Central Bank (SAMA) itself prints, every month.**
+**Official Saudi Central Bank (SAMA) (Saudi Arabia) daily exchange rates for Node.js and TypeScript. The published central bank rates behind tax filings, customs valuations, audits, and compliant invoicing — not market estimates, but the numbers Saudi Central Bank (SAMA) itself prints, every business day.**
 
 ## 🚀 Why this client?
 
@@ -46,39 +46,7 @@ The open endpoint serves the *latest* table only (JSON by default; add `?format=
 The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The same table as text is folded below for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-<details>
-<summary>Table as text: published 2026-07-31 by Saudi Central Bank (SAMA) (the API currently flags this table as stale) — 24 rates. Updated 2026-10-27.</summary>
-
-| Base | Quote | Type | Rate |
-| --- | --- | --- | ---: |
-| AUD | SAR | close | 2.6305805 |
-| AUD | SAR | monthly_average | 2.6118306 |
-| BRL | SAR | close | 0.73916558 |
-| BRL | SAR | monthly_average | 0.73401057 |
-| CHF | SAR | close | 4.6253694 |
-| CHF | SAR | monthly_average | 4.6229663 |
-| CNY | SAR | close | 0.55461841 |
-| CNY | SAR | monthly_average | 0.55337878 |
-| EUR | SAR | close | 4.2976014 |
-| EUR | SAR | monthly_average | 4.2804897 |
-| GBP | SAR | close | 5.030462 |
-| GBP | SAR | monthly_average | 5.0133182 |
-| INR | SAR | close | 0.039235708 |
-| INR | SAR | monthly_average | 0.039136208 |
-| JPY | SAR | close | 0.023293968 |
-| JPY | SAR | monthly_average | 0.023059174 |
-| KRW | SAR | close | 0.0025965805 |
-| KRW | SAR | monthly_average | 0.0025093839 |
-| THB | SAR | close | 0.11198406 |
-| THB | SAR | monthly_average | 0.11192007 |
-| TRY | SAR | close | 0.078847735 |
-| TRY | SAR | monthly_average | 0.079760374 |
-| USD | SAR | close | 3.75 |
-| USD | SAR | monthly_average | 3.75 |
-
-</details>
-
-Source: [Official rates published by SAMA, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/sama/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
+_The table is filled in by the daily workflow._
 <!-- daily-table:end -->
 
 ## 📦 Installation
@@ -161,7 +129,7 @@ console.log(table.rate_date, table.rates.length);
   rates: [
     { "base": "EUR", "quote": "SAR", "type": "close", "value": 4.2976014 },
     { "base": "EUR", "quote": "SAR", "type": "monthly_average", "value": 4.2804897 },
-    // … the rest of the published table (12 currencies vs SAR)
+    // … the rest of the published table (66 currencies vs SAR)
   ],
   disclaimer: '…'
 }
@@ -230,16 +198,16 @@ Pass `{ symbol: 'EUR' }` instead of `source`/`target` to get the raw published r
 
 ## 🗺️ Currencies covered
 
-Saudi Central Bank (SAMA) currently publishes rates covering **12 currencies** against the SAR (as of the latest table):
+Saudi Central Bank (SAMA) currently publishes rates covering **66 currencies** against the SAR (as of the latest table):
 
-🇦🇺 `AUD` · 🇧🇷 `BRL` · 🇨🇭 `CHF` · 🇨🇳 `CNY` · 🇪🇺 `EUR` · 🇬🇧 `GBP` · 🇮🇳 `INR` · 🇯🇵 `JPY` · 🇰🇷 `KRW` · 🇹🇭 `THB` · 🇹🇷 `TRY` · 🇺🇸 `USD`
+🇦🇪 `AED` · 🇦🇫 `AFN` · 🇦🇱 `ALL` · 🇦🇷 `ARS` · 🇦🇺 `AUD` · 🇧🇦 `BAM` · 🇧🇩 `BDT` · 🇧🇬 `BGN` · 🇧🇭 `BHD` · 🇧🇳 `BND` · 🇧🇷 `BRL` · 🇨🇦 `CAD` · 🇨🇭 `CHF` · 🇨🇱 `CLP` · 🇨🇳 `CNY` · 🇨🇴 `COP` · 🇨🇺 `CUP` · 🇨🇿 `CZK` · 🇩🇯 `DJF` · 🇩🇰 `DKK` · 🇩🇿 `DZD` · 🇪🇬 `EGP` · 🇪🇹 `ETB` · 🇪🇺 `EUR` · 🇬🇧 `GBP` · 🇭🇰 `HKD` · 🇭🇺 `HUF` · 🇮🇳 `INR` · 🇮🇸 `ISK` · 🇯🇴 `JOD` · 🇯🇵 `JPY` · 🇰🇪 `KES` · 🇰🇷 `KRW` · 🇰🇼 `KWD` · 🇱🇰 `LKR` · 🇱🇾 `LYD` · 🇲🇦 `MAD` · 🇲🇲 `MMK` · 🇲🇺 `MUR` · 🇲🇽 `MXN` · 🇲🇾 `MYR` · 🇳🇬 `NGN` · 🇳🇴 `NOK` · 🇳🇿 `NZD` · 🇴🇲 `OMR` · 🇵🇭 `PHP` · 🇵🇰 `PKR` · 🇵🇱 `PLN` · 🇶🇦 `QAR` · 🇷🇴 `RON` · 🇷🇺 `RUB` · 🇸🇪 `SEK` · 🇸🇬 `SGD` · 🇸🇴 `SOS` · 🇹🇭 `THB` · 🇹🇯 `TJS` · 🇹🇳 `TND` · 🇹🇷 `TRY` · 🇹🇼 `TWD` · 🇹🇿 `TZS` · 🇺🇸 `USD` · `XAF` · `XDR` · `XOF` · 🇾🇪 `YER` · 🇿🇦 `ZAR`
 
 ## 🏛️ Source
 
-The Saudi Central Bank (SAMA) publishes riyal exchange rates monthly — period averages and end-of-period values for 12 currencies — with the riyal itself pegged to the US dollar at 3.75 since 1986. SAMA offers no machine-readable feed of its own, so this series is sourced from the KAPSARC open-data mirror of SAMA’s table and typically trails the calendar by about two months.
+The Saudi Central Bank (SAMA) publishes a riyal exchange-rate table every day — 60+ currencies, seven days a week — with the riyal itself pegged to the US dollar at 3.75 since 1986. This series comes straight from SAMA’s own exchange-rate page, with daily history from April 2021 and SAMA’s monthly period averages for 12 currencies back to 2009.
 
-- Publisher's own page: [Exchange rates — KAPSARC open-data mirror](https://datasource.kapsarc.org/explore/dataset/exchange-rate/) · [www.sama.gov.sa](https://www.sama.gov.sa)
-- Publication: every month; the exact schedule, freshness status and any current delay are on the [Saudi Central Bank (SAMA) rates page](https://allratestoday.com/central-bank-rates-api/sama/)
+- Publisher's own page: [Exchange rates — sama.gov.sa](https://www.sama.gov.sa/en-US/Currency/FinExc/Pages/Currency.aspx) · [www.sama.gov.sa](https://www.sama.gov.sa)
+- Publication: every business day; the exact schedule, freshness status and any current delay are on the [Saudi Central Bank (SAMA) rates page](https://allratestoday.com/central-bank-rates-api/sama/)
 - Values are stored unmodified, with the publisher's own `rate_date` on every row — see the [methodology](https://allratestoday.com/official-rates-methodology/)
 
 ## 🧭 Reading the numbers
@@ -320,7 +288,7 @@ getRate('EUR', 'SAR', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 
 ## 💡 Quota tips
 
-- Rates change once a month — cache the published table locally and a small monthly quota goes a long way.
+- Rates change once per business day — cache the published table locally and a small monthly quota goes a long way.
 - Every request counts toward your AllRatesToday quota, shared across all AllRatesToday endpoints on your key.
 
 ## 📖 Methods reference
