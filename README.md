@@ -165,11 +165,11 @@ const pair = await getRate('EUR', 'SAR', { apiKey: 'art_live_...' });
 {
   bank: 'sama',
   name: 'Saudi Central Bank (SAMA)',
-  rate_date: '2026-07-31',   // Saudi Central Bank (SAMA)'s own publication date
+  rate_date: '2026-10-27',   // Saudi Central Bank (SAMA)'s own publication date
   source: 'EUR',
   target: 'SAR',
-  rate: 4.2976014,
-  rate_type: 'close',
+  rate: 4.2015,
+  rate_type: 'reference',
   derived: false,
   method: 'published',
   disclaimer: 'Official rates as published by the named central bank. On weekends/holidays the most recent published rate_date is returned.'
@@ -193,10 +193,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'sama',
   name: 'Saudi Central Bank (SAMA)',
-  rate_date: '2026-07-31',
+  rate_date: '2026-10-27',
   rates: [
-    { "base": "EUR", "quote": "SAR", "type": "close", "value": 4.2976014 },
-    { "base": "EUR", "quote": "SAR", "type": "monthly_average", "value": 4.2804897 },
+    { "base": "EUR", "quote": "SAR", "type": "reference", "value": 4.2015 },
     // … the rest of the published table (66 currencies vs SAR)
   ],
   disclaimer: '…'
@@ -236,7 +235,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'sama-exchange-rate';
 
 const series = await getHistory(
-  { source: 'EUR', target: 'SAR', from: '2026-01-01', to: '2026-07-31' },
+  { source: 'EUR', target: 'SAR', from: '2026-01-01', to: '2026-10-27' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -249,11 +248,11 @@ const series = await getHistory(
   source: 'EUR',
   target: 'SAR',
   from: '2026-01-01',
-  to: '2026-07-31',
+  to: '2026-10-27',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-07-31', rate: 4.2976014, rate_type: 'close', derived: false, method: 'published' },
+    { date: '2026-10-27', rate: 4.2015, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -283,7 +282,7 @@ The Saudi Central Bank (SAMA) publishes a riyal exchange-rate table every day �
 - `value` is always **quote currency per 1 unit of base currency** (`base: "EUR", quote: "USD", value: 1.15` means 1 EUR = 1.15 USD).
 - Saudi Central Bank (SAMA) quotes **SAR per 1 unit of foreign currency** (e.g. `base: "USD", quote: "SAR"` means SAR per one US dollar).
 - Need the other way round? Ask `getRate(target, source)` and the API inverts or crosses for you, flagged `derived: true` — never divide a published rate yourself in a compliance workflow.
-- `rate_type` tells you which of the central bank's series a row belongs to (`close` here); some publishers print buy/sell or several fixings for the same pair.
+- `rate_type` tells you which of the central bank's series a row belongs to (`reference` here); some publishers print buy/sell or several fixings for the same pair.
 
 ## 🧩 ERP & accounting systems
 
