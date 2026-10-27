@@ -47,7 +47,7 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-07-31 by Saudi Central Bank (SAMA) (the API currently flags this table as stale) — 24 rates. Updated 2026-10-21.</summary>
+<summary>Table as text: published 2026-07-31 by Saudi Central Bank (SAMA) (the API currently flags this table as stale) — 24 rates. Updated 2026-10-26.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
@@ -348,6 +348,7 @@ Need the whole archive rather than an API call? The same published tables are mi
 - [API documentation](https://allratestoday.com/docs/#central-bank) · [Interactive reference](https://allratestoday.com/api-reference/) · [Methodology](https://allratestoday.com/official-rates-methodology/)
 - [Register (Free)](https://allratestoday.com/register) · [Dashboard](https://allratestoday.com/profile) · [Pricing](https://allratestoday.com/pricing/)
 - [Status](https://allratestoday.com/status)
+- [Postman collection](https://allratestoday.com/postman/)
 - [GitHub](https://github.com/AllRates-Today/sama-exchange-rate)
 
 ## 📜 License
