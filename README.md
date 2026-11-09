@@ -32,7 +32,7 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-11-08 by Saudi Central Bank (SAMA) — 66 rates, first 60 shown. Updated 2026-11-08.</summary>
+<summary>Table as text: published 2026-11-09 by Saudi Central Bank (SAMA) — 66 rates, first 60 shown. Updated 2026-11-09.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
