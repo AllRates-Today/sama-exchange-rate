@@ -32,7 +32,7 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-11-14 by Saudi Central Bank (SAMA) — 66 rates, first 60 shown. Updated 2026-11-14.</summary>
+<summary>Table as text: published 2026-11-15 by Saudi Central Bank (SAMA) — 66 rates, first 60 shown. Updated 2026-11-15.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
@@ -45,7 +45,7 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 | BDT | SAR | reference | 0.03013 |
 | BGN | SAR | reference | 2.11428 |
 | BHD | SAR | reference | 9.94431 |
-| BND | SAR | reference | 2.91112 |
+| BND | SAR | reference | 2.91262 |
 | BRL | SAR | reference | 0.66517 |
 | CAD | SAR | reference | 2.63148 |
 | CHF | SAR | reference | 4.47413 |
@@ -54,7 +54,7 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 | COP | SAR | reference | 0.00113 |
 | CUP | SAR | reference | 0.15625 |
 | CZK | SAR | reference | 0.16941 |
-| DJF | SAR | reference | 0.02108 |
+| DJF | SAR | reference | 0.02111 |
 | DKK | SAR | reference | 0.55314 |
 | DZD | SAR | reference | 0.02737 |
 | EGP | SAR | reference | 0.07019 |
